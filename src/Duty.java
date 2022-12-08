@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Duty extends Note{
+public class Duty extends Note {
     private double sumDuty;
 
     public Duty(String text, LocalDate localDate, TypeNote TYPENOTE, String header, double sumDuty) {

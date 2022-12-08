@@ -1,7 +1,9 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Contacts extends AbstractNote{
+public class Contacts extends AbstractNote implements WriteToFile{
     private int numberPhone;
     private String nameContact;
     private TypeNumber typenumber;
@@ -55,4 +57,12 @@ public class Contacts extends AbstractNote{
                 ", typenumber=" + typenumber +
                 '}';
     }
-}
+
+    @Override
+    public void createWrite() throws IOException {
+        FileWriter fileWriter = new FileWriter("NoteBook.txt", true);
+        fileWriter.write("\n      Дата создания заметки: " + getLocalDate() + "\nТекст заметки: " + getText() +
+                "\nТип заметки: " + getTypenote() + "\nНомер телефона: " + getNumberPhone() +
+                "\nИмя контакта: " + getNameContact() + "\nТип номера: " + getTypenumber() + "\n");
+    }
+    }

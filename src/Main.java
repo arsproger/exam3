@@ -18,17 +18,12 @@ public class Main {
 
 
         try {
-            FileWriter fileWriter = new FileWriter("NoteBook.txt");
+            FileWriter fileWriter = new FileWriter("NoteBook.txt", true);
             for(Note note : Note.getList()) {
-//                fileWriter.write(note.toString() + "\n");
-                fileWriter.write("\n      Дата создания заметки: " + note.getLocalDate() + "\nТекст заметки: " + note.getText() +
-                        "\nТип заметки: "+ note.getTypenote() + "\nЗаголовок: " + note.getHeader() + "\n");
+                note.createWrite();
             }
             for(Contacts contact : Contacts.getList()) {
-//                fileWriter.write(contact.toString() + "\n");
-                fileWriter.write("\n      Дата создания заметки: " + contact.getLocalDate() + "\nТекст заметки: " + contact.getText() +
-                        "\nТип заметки: " + contact.getTypenote() + "\nНомер телефона: " + contact.getNumberPhone() +
-                        "\nИмя контакта: " + contact.getNameContact() + "\nТип номера: " + contact.getTypenumber() + "\n");
+                contact.createWrite();
             }
             System.out.println("Успешная запись!");
             fileWriter.close();
