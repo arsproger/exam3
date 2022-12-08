@@ -1,3 +1,3 @@
-public enum TYPENOTE {
+public enum TypeNote {
     IDEAS, DUTY
 }

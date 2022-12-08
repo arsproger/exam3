@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface WriteToFile {
+public interface WriteToFile {
+    void createWrite();
 }

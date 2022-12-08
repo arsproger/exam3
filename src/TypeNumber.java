@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public enum TYPENUMBER {
+public enum TypeNumber {
+    CITY, MOBILE
 }
